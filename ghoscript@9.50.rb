@@ -1,4 +1,4 @@
-class GhostscriptAT9.50 < Formula
+class GhostscriptAT950 < Formula
   desc "Interpreter for PostScript and PDF"
   homepage "https://www.ghostscript.com/"
   version = "9.50"
