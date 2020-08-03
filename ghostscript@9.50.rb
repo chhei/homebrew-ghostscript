@@ -1,24 +1,24 @@
 class GhostscriptAT950 < Formula
   desc "Interpreter for PostScript and PDF"
   homepage "https://www.ghostscript.com/"
-  version = "9.50"
+  version "9.50"
   url "https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs950/ghostscript-{version}.tar.gz"
   sha256 "acee64fae78771bffa19b0b2bfaba3c345b420f93ceb4fc9df5fb705f785c8ed720fde2aef53546fac6aca2f7366c64c68a6e373a71999a42dc71aadc9aa782f"
 
-  bottle do
-    sha256 "8cd0efa1e5525f849be3ee1e50e1635b99667cb4d1eb6c3002a45378346882f4" => :catalina
-    sha256 "8906a4dbf2513963a4710f351e3426622c259bd888c760e4c08a9436860b4014" => :mojave
-    sha256 "cd5e55d0429d7e88ba2d580e79934c157d5bd2981d71a7f40db4573abe79af67" => :high_sierra
-  end
+  # bottle do
+  #   sha256 "8cd0efa1e5525f849be3ee1e50e1635b99667cb4d1eb6c3002a45378346882f4" => :catalina
+  #   sha256 "8906a4dbf2513963a4710f351e3426622c259bd888c760e4c08a9436860b4014" => :mojave
+  #   sha256 "cd5e55d0429d7e88ba2d580e79934c157d5bd2981d71a7f40db4573abe79af67" => :high_sierra
+  # end
 
-  head do
-    # Can't use shallow clone. Doing so = fatal errors.
-    url "https://git.ghostscript.com/ghostpdl.git", :shallow => false
-
-    depends_on "autoconf" => :build
-    depends_on "automake" => :build
-    depends_on "libtool" => :build
-  end
+  # head do
+  #   # Can't use shallow clone. Doing so = fatal errors.
+  #   url "https://git.ghostscript.com/ghostpdl.git", :shallow => false
+  #
+  #   depends_on "autoconf" => :build
+  #   depends_on "automake" => :build
+  #   depends_on "libtool" => :build
+  # end
 
   depends_on "pkg-config" => :build
   depends_on "libtiff"
